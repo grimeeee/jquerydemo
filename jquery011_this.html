@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          document.write(this + "," + $(this) + "<br />"); //[object HTMLButtonElement],[object Object]
+          document.write(this.parentNode.nodeName + "<br/>"); //버튼의 분모의 이름 BODY
+
+          document.write($(this).parent()[0].nodeName + "<br/>");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button id="btn">commit</button>
+  </body>
+</html>
